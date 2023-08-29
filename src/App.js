@@ -117,6 +117,9 @@ function Output({ records }) {
   }
   else return (
     <div className='content'>
+      <div class="arrow bounce">
+        <a class="fa fa-arrow-down fa-2x" href="#"></a>
+      </div>
       <div className='header'>
         <div>
           <div>Month</div>
@@ -147,7 +150,7 @@ function Output({ records }) {
           <div></div>
         </div>
         <div className='record final'>
-          Total Net Value (Final Account Balance + Total Expense Amount)= {Math.round(records.reduce((total, record) => total + Math.round(record.expenseAmount), 0)+ records[records.length-1].newBalance)}
+          Total Net Value (Final Account Balance + Total Expense Amount)= {Math.round(records.reduce((total, record) => total + Math.round(record.expenseAmount), 0) + records[records.length - 1].newBalance)}
         </div>
       </div>
     </div>
